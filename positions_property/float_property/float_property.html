@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 50px;
+        }
+
+                        /* Float Property  */
+
+            .float-property{
+                float:left;
+                background-color: rgb(210, 247, 247);
+                margin:50px;
+                padding: 1em;
+            }    
+            .get-float-out-para{
+                clear: left;
+            }       
+
+/* If you want to break the paragraph where you want out from the float postion as selected here with image  we can use by either create a selector or if selector is defined then add the property clear and add the value as per left/right/etc. Also all of the selectors including the clear property added and below ones selectors which doesn't have clear property still will escape out from the float postion as here it is with image*/
+
+    </style>
+</head>
+<body>
+    <img class="float-property" src="buffet.png" alt="" width="300px" height="300px"></img>
+
+    <h1 style="text-align: center; background-color: burlywood;">Restaurant</h1>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro harum reprehenderit, facere qui, eaque molestiae sunt necessitatibus similique omnis debitis nostrum voluptatibus ut at? Dicta laudantium delectus quas quod vel.</p>
+
+    <p class="get-float-out-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro harum reprehenderit, facere qui, eaque molestiae sunt necessitatibus similique omnis debitis nostrum voluptatibus ut at? Dicta laudantium delectus quas quod vel.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro harum reprehenderit, facere qui, eaque molestiae sunt necessitatibus similique omnis debitis nostrum voluptatibus ut at? Dicta laudantium delectus quas quod vel.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro harum reprehenderit, facere qui, eaque molestiae sunt necessitatibus similique omnis debitis nostrum voluptatibus ut at? Dicta laudantium delectus quas quod vel.</p>
+
+</body>
+</html>

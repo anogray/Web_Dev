@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+                            /* Specificity Property */
+        
+        ul#ulclass {
+            color:red;
+        }
+        .specific{
+            color: green;
+        }
+        li.specific{
+            color:blue;
+        }
+        /* li{
+            color:plum;
+        } */
+         #newid{
+            color:aqua;
+        }
+        li#newid{
+            color:beige;
+        }
+        ul li#newid{
+            color:black
+        }
+        ul#ulclass li#newid{
+            color:darkkhaki;
+        } 
+
+                        /* Inheritance Property */
+
+        /* body{
+            color:green;
+        } */
+        #inherit-class{
+            color:blue;
+        }
+        /* #inherit-class{
+            color:inherit;
+        } */
+        #inherit-id{
+            color:initial;
+        }
+
+/*initial is black or say default dependent broswer*/
+
+        /* #inherit-id{
+            color:inherit;
+        } */
+
+/*inherited means inherited from parent selector property from the selected
+tag like if ul has color has green then inherit-id is child /inside parent/ul
+tag so it gets that color
+*/
+
+        #inherit-specific{
+            color:unset;
+        }
+/* unset is used which doesn't have any color by default it is wrong I guess */
+
+
+                        /* Important Property */
+   /* Most powerful specificity is !important than any other one */
+        
+        #important-class{
+            color:red;
+        }
+        #important-id{
+            color:lightgreen !important;
+        }
+/* Even though inline is declared as purple but !important has been declared
+for the selector so priority will be !important than anyone */
+
+
+                        /* Overflow Property */
+
+    .overflow-property{
+        border: 5px solid black;
+        width:60px;
+        height: 60px;
+        overflow: visible;
+        /* if overflow property value visible is used then it is same as without
+        using overflow property and hence it is not able to wrap content
+        and it will escape fron the used width,height of box */
+
+        overflow:hidden;
+        /* if overflow value is used then the content will still be present
+        but it will cut/clip and display content within the box dimensions
+        you have defined */
+
+        overflow:scroll;
+        /* if overflow value is scroll then it will add a scroll bar inorder
+        to neither clip it neither escape the content and it will render
+        content inside the box dimensions defined */
+
+        overflow: auto;
+        /* if overflow is auto it is as same as scroll but if content width/height
+        is already inside the defined box/div dimensions then it would
+        not render the display, mostly used auto as it is smart */
+    }
+
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Specificity Property</h1>
+
+    <ul id="ulclass">
+        <li id="newid">Apple</li>
+        <li class="specific">Oranges</li>
+        <li>Grapes</li>
+    </ul>
+
+    <h1 style="text-align: center;">Inheritance Property</h1>
+
+    <ul id="inherit-class">
+        <li id="inherit-id">Apple</li>
+        <li class="inherit-specific">Oranges</li>
+        <li>Grapes</li>
+    </ul>
+
+    <h1 style="text-align: center;">Important Property</h1>
+
+    <ul id="important-class">
+        <li id="important-id" style="color:purple;">Apple</li>
+        <li class="important-specific">Oranges</li>
+        <li>Grapes</li>
+    </ul>
+
+    <h1 style="text-align: center;">Overflow Property</h1>
+
+    <div class="overflow-property">
+    <p style="padding-left:20px ;">We are the overflow content</p>
+    </div>
+
+</body>
+</html>
